@@ -11,14 +11,14 @@ from datetime import datetime
 from .utils import extract_answer, save_resp
 
 # Initialize Perplexity client
+COOKIES_PATH = "perplexity_cookies.json"
 try:
-    with open("perplexity_cookies.json", "r", encoding="utf-8") as f:
+    with open(COOKIES_PATH, "r", encoding="utf-8") as f:
         perplexity_cookies = json.load(f)
 except (FileNotFoundError, json.JSONDecodeError):
-    print("Cookies file not found or invalid. Using empty cookies.")
     perplexity_cookies = {}
 
-perplexity_cli = perplexity.Client(perplexity_cookies)
+perplexity_cli = perplexity.Client(perplexity_cookies, cookies_path=COOKIES_PATH)
 app = FastAPI(
     title="Perplexity Web API", description="Stream Perplexity AI responses using SSE"
 )

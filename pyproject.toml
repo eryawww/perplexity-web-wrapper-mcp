@@ -1,12 +1,27 @@
 [project]
 name = "perplexity-web-wrapper"
-version = "0.1.0"
-description = "Unofficial wrapper for Perplexity AI's web interface."
+version = "0.2.0"
+description = "Unofficial Perplexity AI client — CLI, MCP server, and Python library. Search, deep research, Spaces, Discover, and more."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "curl-cffi>=0.11.3",
     "fastapi>=0.115.12",
+    "mcp>=1.26.0",
+    "playwright>=1.58.0",
+    "playwright-stealth>=2.0.2",
     "uvicorn>=0.34.3",
     "websocket-client>=1.8.0",
 ]
+
+[project.scripts]
+perplexity = "cli:main"
+perplexity-mcp = "mcp_server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["lib", "api"]
+force-include = {"cli.py" = "cli.py", "mcp_server.py" = "mcp_server.py"}
