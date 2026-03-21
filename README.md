@@ -8,6 +8,8 @@
 > Unofficial Perplexity AI client that works **without the official API**.
 > Fork of [saiteja-madha/perplexity-web-wrapper](https://github.com/saiteja-madha/perplexity-web-wrapper), updated for the current Perplexity website.
 
+> **Related**: [notebooklm-mcp-cli](https://github.com/jacob-bd/notebooklm-mcp-cli) — Google NotebookLM as an MCP server
+
 ### ✨ What's New
 
 | Feature | Description |
