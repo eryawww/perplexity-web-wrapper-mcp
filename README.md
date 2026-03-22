@@ -15,6 +15,8 @@
 
 ![demo](docs/demo.gif)
 
+![demo-claude](docs/demo-claude.gif)
+
 ### ✨ What's New
 
 | Feature | Description |
