@@ -10,6 +10,11 @@
 
 > **Related**: [notebooklm-mcp-cli](https://github.com/jacob-bd/notebooklm-mcp-cli) — Google NotebookLM as an MCP server
 
+> [!WARNING]
+> **This project may not comply with Perplexity AI's Terms of Service.** It works by automating a browser session against the Perplexity website — not through any official API. Use at your own risk. Your account may be rate-limited or banned. The author is not responsible for any consequences.
+
+![demo](docs/demo.gif)
+
 ### ✨ What's New
 
 | Feature | Description |
